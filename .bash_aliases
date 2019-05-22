@@ -1,0 +1,7 @@
+alias cdind='cd /opt/liferay/ind/liferay/tomcat'
+alias telgit='telnet git.rithm.nl 50022'
+alias telindtest='telnet ind-test-be.rithm.eu 50022'
+alias telinddev='telnet ind-dev-be.rithm.eu 50022'
+alias sshindtest='ssh jrakhman@ind-test-be.rithm.eu'
+alias sshinddev='ssh jrakhman@ind-dev-be.rithm.eu'
+alias citra='flatpak run org.citra.citra-nightly/x86_64/master'
