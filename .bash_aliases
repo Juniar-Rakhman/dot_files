@@ -5,3 +5,16 @@ alias telinddev='telnet ind-dev-be.rithm.eu 50022'
 alias sshindtest='ssh jrakhman@ind-test-be.rithm.eu'
 alias sshinddev='ssh jrakhman@ind-dev-be.rithm.eu'
 alias citra='flatpak run org.citra.citra-nightly/x86_64/master'
+alias vi="vim"
+alias r="source ~/.zshrc"
+alias tat='tmux new-session -As $(basename "$PWD" | tr . -)' # will attach if session exists, or create a new session
+alias tmuxsrc="tmux source-file ~/.tmux.conf"
+alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}" # tmux kill all sessions
+alias ct="ctags -R --exclude=.git --exclude=node_modules"
+alias dotfiles="ls -a | grep '^\.' | grep --invert-match '\.DS_Store\|\.$'"
+
+# some more ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
