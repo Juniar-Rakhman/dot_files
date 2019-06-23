@@ -2,7 +2,12 @@ export TERM="xterm-256color"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Launch tmux on startup
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then
+	tmux;
+	tmux source "/usr/share/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf";
+fi
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -102,4 +107,8 @@ source $ZSH/oh-my-zsh.sh
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
+fi
+
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
