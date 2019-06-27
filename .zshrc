@@ -2,10 +2,10 @@ export TERM="xterm-256color"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Launch tmux on startup
-if [ "$TMUX" = "" ]; then
-	tmux;
-	tmux source "/usr/share/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf";
-fi
+#if [ "$TMUX" = "" ]; then
+#	tmux;
+#	tmux source "/usr/share/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf";
+#fi
 
 
 
