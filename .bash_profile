@@ -19,7 +19,7 @@ PATH=$GOPATH:$GOROOT/bin:$PATH
 # Ubuntu make installation of Ubuntu Make binary symlink
 PATH=/home/jrakhman/.local/share/umake/bin:$PATH
 
-JAVA_HOME=/usr/lib/jvm/jdk1.7.0_80
-JRE_HOME=/usr/lib/jvm/jdk1.7.0_80/jre
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_231
+JRE_HOME=/usr/lib/jvm/jdk1.8.0_231/jre
 PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
