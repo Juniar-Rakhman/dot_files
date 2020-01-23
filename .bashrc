@@ -88,8 +88,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -AlF'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -123,3 +123,7 @@ fi
 export NVM_DIR="/home/jrakhman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+export PATH="$PATH:/home/jrakhman/jpm/bin"
+
+export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/go/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"

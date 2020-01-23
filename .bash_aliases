@@ -4,7 +4,9 @@ alias telindtest='telnet ind-test-be.rithm.eu 50022'
 alias telinddev='telnet ind-dev-be.rithm.eu 50022'
 alias sshindtest='ssh jrakhman@ind-test-be.rithm.eu'
 alias sshinddev='ssh jrakhman@ind-dev-be.rithm.eu'
-alias citra='flatpak run org.citra.citra-nightly/x86_64/master'
+alias telsafe='telnet safe-dev.rithm.eu 50022'
+alias sshsafe='ssh jrakhman@safe-dev.rithm.eu'
+
 alias vi="vim"
 alias r="source ~/.zshrc"
 alias tat='tmux new-session -As $(basename "$PWD" | tr . -)' # will attach if session exists, or create a new session
@@ -15,6 +17,6 @@ alias dotfiles="ls -a | grep '^\.' | grep --invert-match '\.DS_Store\|\.$'"
 
 # some more ls aliases
 alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -AlF'
 alias l='ls -CF'
