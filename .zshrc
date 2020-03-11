@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export TERM="xterm-256color"
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 
@@ -6,7 +13,6 @@ export TERM="xterm-256color"
 #	tmux;
 #	tmux source "/usr/share/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf";
 #fi
-
 
 
 # If you come from bash you might have to change your $PATH.
@@ -112,9 +118,7 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/go/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"
+export EDITOR=vim
