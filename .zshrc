@@ -1,11 +1,16 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export TERM="xterm-256color"
-#POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Launch tmux on startup
-#if [ "$TMUX" = "" ]; then
-#	tmux;
-#	tmux source "/usr/share/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf";
-#fi
+if [ "$TMUX" = "" ]; then
+	tmux;
+fi
 
 
 
@@ -20,9 +25,6 @@ export ZSH="/home/jrakhman/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL10K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL10K_SHORTEN_STRATEGY=truncate_folders
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,7 +84,13 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	docker
+	docker-compose
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,9 +120,7 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+#export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/go/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"
 
-
-export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/go/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

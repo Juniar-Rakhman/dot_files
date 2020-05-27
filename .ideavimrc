@@ -1,19 +1,53 @@
+source ~/.vimrc.keymap
 
-set clipboard+=unnamed
-set showmode
-map <C-t><k> :tabr<cr>
-map <C-t><j> :tabl<cr>
-map <C-t><h> :tabp<cr>
-map <C-t><l> :tabn<cr>
-nnoremap <esc><esc> :nohls<cr>
+set clipboard=unnamed,autoselect
+set surround
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
-" ---------------
-" Searching
-" ---------------
-set ignorecase " Case insensitive search
-set smartcase  " Non-case sensitive search
-set incsearch  " Incremental search
-set hlsearch   " Highlight search results
-set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
-  \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc,*/node_modules/*,
-  \rake-pipeline-*
+" general
+nnoremap ,a :<C-u>action GotoAction<CR>
+vnoremap ,a :<C-u>action GotoAction<CR>
+nnoremap ,e :<C-u>action SearchEverywhere<CR>
+nnoremap ,s :<C-u>action FileStructurePopup<CR>
+nnoremap ,g :<C-u>action FindInPath<CR>
+nnoremap ,f :<C-u>action Find<CR>
+nnoremap ,r :<C-u>action RecentFiles<CR>
+nnoremap ,t :<C-u>action HideAllWindows<CR>
+
+" jump on code
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gi :<C-u>action GotoImplementation<CR>
+nnoremap gf :<C-u>action GotoFile<CR>
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+nnoremap gu :<C-u>action ShowUsages<CR>
+nnoremap gt :<C-u>action GotoTest<CR>
+nnoremap gh :<C-u>action Back<CR>
+nnoremap gl :<C-u>action Forward<CR>
+
+" code editing
+nnoremap r :<C-u>action RenameElement<CR>
+nnoremap q :<C-u>action ShowIntentionActions<CR>
+nnoremap == :<C-u>action ReformatCode<CR>
+vnoremap == :<C-u>action ReformatCode<CR>
+nnoremap cc :<C-u>action CommentByLineComment<CR>
+vnoremap cc :<C-u>action CommentByLineComment<CR>
+
+" show information
+nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
+
+nnoremap ,p :<C-u>action PasteMultiple<CR>
+nnoremap ,P :<C-u>action PasteMultiple<CR>
+
+nnoremap f :<C-u>action AceAction<CR>
+vnoremap f :<C-u>action AceAction<CR>
+
+" kick intellij commands
+nnoremap R :<C-u>action ChooseRunConfiguration<CR>
+
+" window
+nnoremap s; :<C-u>action ClosoActiveTab<CR>
+nnoremap so :<C-u>action MoveEditorToOppositeTabGroup<CR>
