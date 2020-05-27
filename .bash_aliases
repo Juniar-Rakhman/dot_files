@@ -6,6 +6,8 @@ alias sshindtest='ssh jrakhman@ind-test-be.rithm.eu'
 alias sshinddev='ssh jrakhman@ind-dev-be.rithm.eu'
 alias telsafe='telnet safe-dev.rithm.eu 50022'
 alias sshsafe='ssh jrakhman@safe-dev.rithm.eu'
+alias telpoc='telnet ind-poc.rithm.eu 50022'
+alias sshpoc='ssh jrakhman@ind-poc.rithm.eu'
 
 alias vi="vim"
 alias r="source ~/.zshrc"
