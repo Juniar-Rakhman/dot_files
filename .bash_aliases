@@ -10,6 +10,7 @@ alias telpoc='telnet ind-poc.rithm.eu 50022'
 alias sshpoc='ssh jrakhman@ind-poc.rithm.eu'
 
 alias vi="vim"
+alias svim="sudo vim"
 alias r="source ~/.zshrc"
 alias tat='tmux new-session -As $(basename "$PWD" | tr . -)' # will attach if session exists, or create a new session
 alias tmuxsrc="tmux source-file ~/.tmux.conf"
