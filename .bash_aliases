@@ -1,4 +1,5 @@
 alias cdind='cd /opt/liferay/ind/liferay/tomcat'
+alias cdindfe='cd /opt/liferay/indfe/liferay/tomcat'
 alias telgit='telnet git.rithm.nl 50022'
 alias telindtest='telnet ind-test-be.rithm.eu 50022'
 alias telinddev='telnet ind-dev-be.rithm.eu 50022'
