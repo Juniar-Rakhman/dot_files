@@ -8,6 +8,7 @@ set ignorecase
 set smartcase
 set rnu
 set nu
+set nohls
 
 " general
 nnoremap ,a :<C-u>action GotoAction<CR>
@@ -38,7 +39,6 @@ vnoremap == :<C-u>action ReformatCode<CR>
 nnoremap cc :<C-u>action CommentByLineComment<CR>
 vnoremap cc :<C-u>action CommentByLineComment<CR>
 
-
 " show information
 nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
 
@@ -52,5 +52,5 @@ vnoremap f :<C-u>action AceAction<CR>
 nnoremap R :<C-u>action ChooseRunConfiguration<CR>
 
 " window
-nnoremap s; :<C-u>action ClosoActiveTab<CR>
+nnoremap s; :<C-u>action CloseActiveTab<CR>
 nnoremap so :<C-u>action MoveEditorToOppositeTabGroup<CR>

@@ -18,5 +18,10 @@ PATH=$GOPATH/bin:$PATH
 #RUST related path
 PATH=$HOME/.cargo/bin:$PATH
 
+#Yarn related path
+PATH=$HOME/.yarn/bin:$PATH
+
 # Ubuntu make installation of Ubuntu Make binary symlink
-PATH=/home/jrakhman/.local/share/umake/bin:$PATH
+PATH=$HOME/.local/share/umake/bin:$PATH
+
+XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:$XDG_DATA_DIRS

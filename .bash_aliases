@@ -1,14 +1,12 @@
-alias cdind='cd /opt/liferay/ind/liferay/tomcat'
-alias cdindfe='cd /opt/liferay/indfe/liferay/tomcat'
+# telnet & ssh aliases
 alias telgit='telnet git.rithm.nl 50022'
-alias telindtest='telnet ind-test-be.rithm.eu 50022'
-alias telinddev='telnet ind-dev-be.rithm.eu 50022'
-alias sshindtest='ssh jrakhman@ind-test-be.rithm.eu'
-alias sshinddev='ssh jrakhman@ind-dev-be.rithm.eu'
 alias telsafe='telnet safe-dev.rithm.eu 50022'
 alias sshsafe='ssh jrakhman@safe-dev.rithm.eu'
-alias telpoc='telnet ind-poc.rithm.eu 50022'
-alias sshpoc='ssh jrakhman@ind-poc.rithm.eu'
+alias sshsmadev='ssh jrakhman@52.49.43.119'
+alias sshep='ssh -D 5001 jrakhman@easierphone-dev.almende.org'
+
+#directory aliases
+alias cdep='cd ~/projects/java/easierphone/easierphone_android_backend'
 
 alias vi="vim"
 alias svim="sudo vim"
@@ -24,3 +22,8 @@ alias ls='ls --color=auto'
 alias ll='ls -lF'
 alias la='ls -AlF'
 alias l='ls -CF'
+alias lt='ls -altr'
+
+# ros aliases
+alias cbt="catkin build --this"
+alias sour="source /opt/ros/noetic/setup.zsh"

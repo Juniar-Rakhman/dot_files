@@ -76,12 +76,12 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	docker
+	vi-mode
+	git docker
 	docker-compose
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-	tmux
+	colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,10 +117,8 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#TMUX config
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_AUTOSTART_ONCE="true"
-ZSH_TMUX_AUTOCONNECT="true"
+#AUTOSUGEST_config
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=095'
 
 #Plugins Config
 
@@ -128,6 +126,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#ROS sources 
+source /opt/ros/noetic/setup.zsh
+source ~/projects/ros/tb3_ws/devel/setup.zsh
+
+#TRAEFIK
+#export TRAEFIK_API_DASHBOARD=true
+#export TRAEFIK_API_INSECURE=true
+#export TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=":80"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jrakhman/.sdkman"
 [[ -s "/home/jrakhman/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jrakhman/.sdkman/bin/sdkman-init.sh"
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
