@@ -10,6 +10,9 @@ set rnu
 set nu
 set nohls
 
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+
 " general
 nnoremap ,a :<C-u>action GotoAction<CR>
 vnoremap ,a :<C-u>action GotoAction<CR>

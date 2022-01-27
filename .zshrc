@@ -127,8 +127,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #ROS sources 
-source /opt/ros/noetic/setup.zsh
-source ~/projects/ros/tb3_ws/devel/setup.zsh
+#source /opt/ros/noetic/setup.zsh
+#source ~/projects/ros/tb3_ws/devel/setup.zsh
 
 #TRAEFIK
 #export TRAEFIK_API_DASHBOARD=true
