@@ -135,9 +135,9 @@ export NVM_DIR="$HOME/.nvm"
 #export TRAEFIK_API_INSECURE=true
 #export TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=":80"
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jrakhman/.sdkman"
 [[ -s "/home/jrakhman/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jrakhman/.sdkman/bin/sdkman-init.sh"
 
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

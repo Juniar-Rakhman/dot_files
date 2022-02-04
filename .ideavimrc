@@ -20,7 +20,7 @@ nnoremap ,e :<C-u>action SearchEverywhere<CR>
 nnoremap ,s :<C-u>action FileStructurePopup<CR>
 nnoremap ,g :<C-u>action FindInPath<CR>
 nnoremap ,f :<C-u>action Find<CR>
-nnoremap ,r :<C-u>action RecentFiles<CR>
+nnoremap ,r :<C-u>action Replace<CR>
 nnoremap ,t :<C-u>action HideAllWindows<CR>
 
 " jump on code
