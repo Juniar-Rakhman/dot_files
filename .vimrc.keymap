@@ -3,40 +3,43 @@ let mapleader = ","
 vmap s S
 
 nmap L $
+vmap L $
 nmap H ^
-nmap Y $y
+vmap H ^
+nmap Y v$y
+vmap Y $y
 
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
-nnoremap <Down> gj
-nnoremap <Up>   gk
-vnoremap <Down> gj
-vnoremap <Up>   gk
-
-nmap x "_x
-nmap X x
+nnoremap x "_x
+vnoremap x "_x
+nnoremap X x
+vnoremap X x
 
 " s will be used to control windows and tabs
-nmap s <Nop>
+nnoremap s <Nop>
+vnoremap s <Nop>
 
-nmap sj <C-w>j         
-nmap sk <C-w>k
-nmap sl <C-w>l
-nmap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
 
-nmap s- <C-w>-
-nmap s+ <C-w>+
-nmap s> <C-w>>
-nmap s< <C-w><
+nnoremap s- <C-w>-
+nnoremap s+ <C-w>+
+nnoremap s> <C-w>>
+nnoremap s< <C-w><
 
-nmap ss :<C-u>sp<CR>
-nmap sv :<C-u>vs<CR>
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
 
-nmap st :<C-u>tabnew<CR>
-nmap sT <C-w>T
-nmap sn gt
-nmap sp gT
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sT <C-w>T
+nnoremap sn gt
+nnoremap sp gT
 
 nmap == gg=G
 

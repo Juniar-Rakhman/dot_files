@@ -1,6 +1,7 @@
 source ~/.vimrc.keymap
 
-set clipboard=unnamed,autoselect
+set idearefactormode=keep
+set ideajoin
 set surround
 set hlsearch
 set incsearch
@@ -13,6 +14,8 @@ set nohls
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 
+set clipboard=unnamed,autoselect
+
 " general
 nnoremap ,a :<C-u>action GotoAction<CR>
 vnoremap ,a :<C-u>action GotoAction<CR>
@@ -22,6 +25,8 @@ nnoremap ,g :<C-u>action FindInPath<CR>
 nnoremap ,f :<C-u>action Find<CR>
 nnoremap ,r :<C-u>action Replace<CR>
 nnoremap ,t :<C-u>action HideAllWindows<CR>
+nnoremap ,j :<C-u>action ShowNavBar<CR>
+
 
 " jump on code
 nnoremap gd :<C-u>action GotoDeclaration<CR>
@@ -33,6 +38,7 @@ nnoremap gu :<C-u>action ShowUsages<CR>
 nnoremap gt :<C-u>action GotoTest<CR>
 nnoremap gh :<C-u>action Back<CR>
 nnoremap gl :<C-u>action Forward<CR>
+nnoremap ge :<C-u>action GotoNextError<CR>
 
 " code editing
 nnoremap r :<C-u>action RenameElement<CR>
@@ -46,7 +52,6 @@ vnoremap cc :<C-u>action CommentByLineComment<CR>
 nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
 
 nnoremap ,p :<C-u>action PasteMultiple<CR>
-nnoremap ,P :<C-u>action PasteMultiple<CR>
 
 nnoremap f :<C-u>action AceAction<CR>
 vnoremap f :<C-u>action AceAction<CR>
@@ -55,5 +60,14 @@ vnoremap f :<C-u>action AceAction<CR>
 nnoremap R :<C-u>action ChooseRunConfiguration<CR>
 
 " window
-nnoremap s; :<C-u>action CloseActiveTab<CR>
+nnoremap sq :<C-u>action CloseContent<CR>
 nnoremap so :<C-u>action MoveEditorToOppositeTabGroup<CR>
+nnoremap sz :<C-u>action MaximizeEditorInSplit<CR>
+
+" NerdTree
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+" other plugins
+Plug 'machakann/vim-highlightedyank'

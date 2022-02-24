@@ -85,6 +85,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 
 # User configuration
 
@@ -119,6 +120,9 @@ fi
 
 #AUTOSUGEST_config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=095'
+
+#VIM MODE CONFIG
+export VI_MODE_SET_CURSOR=true
 
 #Plugins Config
 

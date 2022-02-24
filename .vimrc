@@ -33,6 +33,22 @@ set expandtab                   " Expand TABs to spaces.
 
 filetype plugin indent on " Use filetype detection and file-based automatic indenting.
 
-" This auto command will be executed when opening help file
-autocmd Filetype help nmap <buffer> q :q<CR>
+" auto command will be executed when opening help file
 
+autocmd Filetype help nmap <buffer> q :q<CR>
+" Plugins
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
+
+" Make sure you use single quotes
+
+Plug 'junegunn/vim-easy-align'
+
+" Initialize plugin system
+call plug#end()

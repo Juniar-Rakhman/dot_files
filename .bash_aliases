@@ -8,9 +8,10 @@ alias sshep='ssh -D 5001 jrakhman@easierphone-dev.almende.org'
 #directory aliases
 alias cdep='cd ~/projects/java/easierphone/easierphone_android_backend'
 
-alias vi="vim"
-alias svim="sudo vim"
-alias r="source ~/.zshrc"
+alias vi="nvim"
+alias vim="nvim"
+alias svim="sudo nvim"
+alias rzshrc="source ~/.zshrc"
 alias tat='tmux new-session -As $(basename "$PWD" | tr . -)' # will attach if session exists, or create a new session
 alias tmuxsrc="tmux source-file ~/.tmux.conf"
 alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}" # tmux kill all sessions
