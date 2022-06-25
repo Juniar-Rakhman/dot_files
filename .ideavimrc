@@ -26,7 +26,11 @@ nnoremap ,f :<C-u>action Find<CR>
 nnoremap ,r :<C-u>action Replace<CR>
 nnoremap ,t :<C-u>action HideAllWindows<CR>
 nnoremap ,j :<C-u>action ShowNavBar<CR>
+nnoremap ,p :<C-u>action PasteMultiple<CR>
 
+" git commands
+nnoremap ,k :<C-u>action CheckinProject<CR>
+nnoremap ,b :<C-u>action Git.Branches<CR>
 
 " jump on code
 nnoremap gd :<C-u>action GotoDeclaration<CR>
@@ -51,8 +55,6 @@ vnoremap cc :<C-u>action CommentByLineComment<CR>
 " show information
 nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
 
-nnoremap ,p :<C-u>action PasteMultiple<CR>
-
 nnoremap f :<C-u>action AceAction<CR>
 vnoremap f :<C-u>action AceAction<CR>
 
@@ -66,8 +68,6 @@ nnoremap sz :<C-u>action MaximizeEditorInSplit<CR>
 
 " NerdTree
 set NERDTree
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
 
 " other plugins
 Plug 'machakann/vim-highlightedyank'

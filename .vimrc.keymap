@@ -6,13 +6,9 @@ nmap L $
 vmap L $
 nmap H ^
 vmap H ^
+
 nmap Y v$y
 vmap Y $y
-
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
 
 nnoremap x "_x
 vnoremap x "_x

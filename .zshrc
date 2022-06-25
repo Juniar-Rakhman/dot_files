@@ -141,6 +141,11 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+#GO PATH
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/gocode
+export PATH=$GOPATH/bin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jrakhman/.sdkman"
 [[ -s "/home/jrakhman/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jrakhman/.sdkman/bin/sdkman-init.sh"

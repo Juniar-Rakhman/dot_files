@@ -126,4 +126,4 @@ export NVM_DIR="/home/jrakhman/.nvm"
 
 export PATH="$PATH:/home/jrakhman/jpm/bin"
 
-export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/go/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"
+export PATH="/usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin:/home/jrakhman/.local/share/umake/bin:/home/jrakhman/bin:/home/jrakhman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jrakhman/jpm/bin:/home/jrakhman/.vimpkg/bin"
