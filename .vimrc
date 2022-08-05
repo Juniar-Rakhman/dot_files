@@ -36,6 +36,7 @@ filetype plugin indent on " Use filetype detection and file-based automatic inde
 " auto command will be executed when opening help file
 
 autocmd Filetype help nmap <buffer> q :q<CR>
+
 " Plugins
 call plug#begin()
 " The default plugin directory will be as follows:

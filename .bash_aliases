@@ -4,6 +4,7 @@ alias telsafe='telnet safe-dev.rithm.eu 50022'
 alias sshsafe='ssh jrakhman@safe-dev.rithm.eu'
 alias sshsmadev='ssh jrakhman@52.49.43.119'
 alias sshep='ssh -D 5001 jrakhman@easierphone-dev.almende.org'
+alias ssheppp='ssh -D 5001 jrakhman@easierphone-preprod.almende.org'
 
 #directory aliases
 alias cdep='cd ~/projects/java/easierphone/easierphone_android_backend'

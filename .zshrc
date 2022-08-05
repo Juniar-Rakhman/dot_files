@@ -76,7 +76,6 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	vi-mode
 	git docker
 	docker-compose
 	zsh-syntax-highlighting
@@ -121,9 +120,6 @@ fi
 #AUTOSUGEST_config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=095'
 
-#VIM MODE CONFIG
-export VI_MODE_SET_CURSOR=true
-
 #Plugins Config
 
 export NVM_DIR="$HOME/.nvm"
@@ -145,6 +141,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/gocode
 export PATH=$GOPATH/bin:$PATH
+
+# Starship
+eval "$(starship init zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jrakhman/.sdkman"

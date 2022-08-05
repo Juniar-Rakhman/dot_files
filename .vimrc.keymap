@@ -1,11 +1,9 @@
-let mapleader = ","
+let mapleader = " "
 
 vmap s S
 
-nmap L $
-vmap L $
-nmap H ^
-vmap H ^
+map <S-l> $
+map <S-h> ^
 
 nmap Y v$y
 vmap Y $y
