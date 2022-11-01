@@ -81,6 +81,7 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	colored-man-pages
+  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,6 +138,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+export GIT_EDITOR=nvim
+
 #GO PATH
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/gocode
@@ -144,6 +147,11 @@ export PATH=$GOPATH/bin:$PATH
 
 # Starship
 eval "$(starship init zsh)"
+
+NVIM_ROOT=~/.config/nv
+export NVIM_ROOT
+
+alias nv='XDG_DATA_HOME=$NVIM_ROOT/share XDG_CONFIG_HOME=$NVIM_ROOT nvim'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jrakhman/.sdkman"

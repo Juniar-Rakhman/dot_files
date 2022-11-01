@@ -10,31 +10,45 @@ set smartcase
 set rnu
 set nu
 set nohls
+set which-key
+
+" disable the timeout option
+set notimeout
 
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 
 set clipboard=unnamed,autoselect
 
-" general
-nnoremap ,e :<C-u>action SearchEverywhere<CR>
-nnoremap ,g :<C-u>action FindInPath<CR>
-nnoremap ,f :<C-u>action Find<CR>
-nnoremap ,r :<C-u>action Replace<CR>
-nnoremap ,t :<C-u>action HideAllWindows<CR>
-nnoremap ,j :<C-u>action ShowNavBar<CR>
-nnoremap ,p :<C-u>action PasteMultiple<CR>
+nnoremap <leader>t :<C-u>action HideAllWindows<CR>
 
-" finding stuff
-nnoremap <leader>a :<C-u>action GotoAction<CR>
-nnoremap <leader>e :<C-u>action SearchEverywhere<CR>
-nnoremap <leader>f :<C-u>action GotoFile<CR>
-nnoremap <leader>c :<C-u>action GotoClass<CR>
+nnoremap <C-o> :<C-u>action Back<CR>
+nnoremap <C-i> :<C-u>action Forward<CR>
+
+" Code
+nnoremap <leader>cF :<C-u>action FindInPath<CR>
+nnoremap <leader>cf :<C-u>action Find<CR>
+nnoremap <leader>cr :<C-u>action Replace<CR>
+nnoremap <leader>j :<C-u>action ShowNavBar<CR>
+nnoremap <leader>r :<C-u>action RenameElement<CR>
+nnoremap q :<C-u>action ShowIntentionActions<CR>
+nnoremap <leader>f :<C-u>action ReformatCode<CR>
+vnoremap <leader>f :<C-u>action ReformatCode<CR>
+nnoremap <leader>/ :<C-u>action CommentByLineComment<CR>
+vnoremap <leader>/ :<C-u>action CommentByLineComment<CR>
+nnoremap <leader>p :<C-u>action PasteMultiple<CR>
 nnoremap <leader>i :<C-u>action FileStructurePopup<CR>
 
+" finding stuff
+nnoremap <leader>fa :<C-u>action GotoAction<CR>
+nnoremap <leader>ff :<C-u>action GotoFile<CR>
+nnoremap <leader>fk :<C-u>action GotoClass<CR>
+nnoremap <leader>fs :<C-u>action GotoSymbol<CR>
+nnoremap <leader>fe :<C-u>action SearchEverywhere<CR>
+
 " git commands
-nnoremap ,k :<C-u>action CheckinProject<CR>
-nnoremap ,b :<C-u>action Git.Branches<CR>
+nnoremap <leader>gk :<C-u>action CheckinProject<CR>
+nnoremap <leader>gb :<C-u>action Git.Branches<CR>
 
 " jump on code
 nnoremap gd :<C-u>action GotoDeclaration<CR>
@@ -42,36 +56,33 @@ nnoremap gs :<C-u>action GotoSuperMethod<CR>
 nnoremap gi :<C-u>action GotoImplementation<CR>
 nnoremap gf :<C-u>action GotoFile<CR>
 nnoremap gb :<C-u>action JumpToLastChange<CR>
-nnoremap gu :<C-u>action ShowUsages<CR>
+nnoremap gr :<C-u>action ShowUsages<CR>
 nnoremap gt :<C-u>action GotoTest<CR>
-nnoremap gh :<C-u>action Back<CR>
-nnoremap gl :<C-u>action Forward<CR>
 nnoremap ge :<C-u>action GotoNextError<CR>
 
-" code editing
-nnoremap r :<C-u>action RenameElement<CR>
-nnoremap q :<C-u>action ShowIntentionActions<CR>
-nnoremap == :<C-u>action ReformatCode<CR>
-vnoremap == :<C-u>action ReformatCode<CR>
-nnoremap cc :<C-u>action CommentByLineComment<CR>
-vnoremap cc :<C-u>action CommentByLineComment<CR>
-
 " show information
-nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
+nnoremap <S-k> :<C-u>action QuickJavaDoc<CR>
+nnoremap <S-i> :<C-u>action QuickImplementations<CR>
 
 nnoremap f :<C-u>action AceAction<CR>
 vnoremap f :<C-u>action AceAction<CR>
 
 " kick intellij commands
-nnoremap <leader>r :<C-u>action ChooseRunConfiguration<CR>
+nnoremap <leader>R :<C-u>action ChooseRunConfiguration<CR>
 
 " window
 nnoremap sq :<C-u>action CloseContent<CR>
 nnoremap so :<C-u>action MoveEditorToOppositeTabGroup<CR>
 nnoremap sz :<C-u>action MaximizeEditorInSplit<CR>
 
+" UI
+nnoremap <leader>ut :<C-u>action ActivateTerminalToolWindow<CR>
+nnoremap <leader>us :<C-u>action ActivateServicesToolWindow<CR>
+nnoremap <leader>ud :<C-u>action ActivateDatabaseToolWindow<CR>
+
 " NerdTree
 set NERDTree
 
 " other plugins
 Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-surround'

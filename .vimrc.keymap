@@ -17,10 +17,10 @@ vnoremap X x
 nnoremap s <Nop>
 vnoremap s <Nop>
 
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sh <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
 
 nnoremap s- <C-w>-
 nnoremap s+ <C-w>+
@@ -32,8 +32,8 @@ nnoremap sv :<C-u>vs<CR>
 
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sT <C-w>T
-nnoremap sn gt
-nnoremap sp gT
+nnoremap <A-l> gt
+nnoremap <A-h> gT
 
 nmap == gg=G
 
