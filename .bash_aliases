@@ -31,7 +31,7 @@ alias cbt="catkin build --this"
 alias sour="source /opt/ros/noetic/setup.zsh"
 
 # Go aliases
-alias go='richgo'
+# alias go='richgo'
 
 # Docker aliases
 alias dc="docker-compose"

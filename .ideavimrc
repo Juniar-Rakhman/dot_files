@@ -20,7 +20,6 @@ set clipboard+=unnamedplus
 
 set clipboard=unnamed,autoselect
 
-nnoremap <leader>t :<C-u>action HideAllWindows<CR>
 
 nnoremap <C-o> :<C-u>action Back<CR>
 nnoremap <C-i> :<C-u>action Forward<CR>
@@ -29,6 +28,8 @@ nnoremap <C-i> :<C-u>action Forward<CR>
 nnoremap <leader>cF :<C-u>action FindInPath<CR>
 nnoremap <leader>cf :<C-u>action Find<CR>
 nnoremap <leader>cr :<C-u>action Replace<CR>
+let g:WhichKeyDesc_Code = "<Space>c Code"
+
 nnoremap <leader>j :<C-u>action ShowNavBar<CR>
 nnoremap <leader>r :<C-u>action RenameElement<CR>
 nnoremap q :<C-u>action ShowIntentionActions<CR>
@@ -45,10 +46,12 @@ nnoremap <leader>ff :<C-u>action GotoFile<CR>
 nnoremap <leader>fk :<C-u>action GotoClass<CR>
 nnoremap <leader>fs :<C-u>action GotoSymbol<CR>
 nnoremap <leader>fe :<C-u>action SearchEverywhere<CR>
+let g:WhichKeyDesc_Find = "<Space>f Find"
 
 " git commands
 nnoremap <leader>gk :<C-u>action CheckinProject<CR>
 nnoremap <leader>gb :<C-u>action Git.Branches<CR>
+let g:WhichKeyDesc_Git = "<Space>g git"
 
 " jump on code
 nnoremap gd :<C-u>action GotoDeclaration<CR>
@@ -71,7 +74,7 @@ vnoremap f :<C-u>action AceAction<CR>
 nnoremap <leader>R :<C-u>action ChooseRunConfiguration<CR>
 
 " window
-nnoremap sq :<C-u>action CloseContent<CR>
+nnoremap <leader>q :<C-u>action CloseContent<CR>
 nnoremap so :<C-u>action MoveEditorToOppositeTabGroup<CR>
 nnoremap sz :<C-u>action MaximizeEditorInSplit<CR>
 
@@ -79,6 +82,9 @@ nnoremap sz :<C-u>action MaximizeEditorInSplit<CR>
 nnoremap <leader>ut :<C-u>action ActivateTerminalToolWindow<CR>
 nnoremap <leader>us :<C-u>action ActivateServicesToolWindow<CR>
 nnoremap <leader>ud :<C-u>action ActivateDatabaseToolWindow<CR>
+let g:WhichKeyDesc_UI = "<Space>u  UI"
+
+nnoremap <leader>t :<C-u>action HideAllWindows<CR>
 
 " NerdTree
 set NERDTree
@@ -86,3 +92,6 @@ set NERDTree
 " other plugins
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-surround'
+
+
+
