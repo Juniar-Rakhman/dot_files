@@ -64,11 +64,11 @@ export ZSH="/home/jrakhman/.oh-my-zsh"
 
 # Plugins
 plugins=(
-  git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	colored-man-pages
-  zsh-vi-mode
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    colored-man-pages
+    zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,10 +108,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# lazy nvim
 LVIM_ROOT=~/.config/lvim
 export LVIM_ROOT
-
 alias lvim='XDG_DATA_HOME=$LVIM_ROOT/share XDG_CONFIG_HOME=$LVIM_ROOT nvim'
+
+# astro nvim
+AVIM_ROOT=~/.config/astro_nvim
+export AVIM_ROOT
+alias avim='XDG_DATA_HOME=$AVIM_ROOT/share XDG_CONFIG_HOME=$AVIM_ROOT nvim'
+
+# custom nvim
+NVIM_ROOT=~/.config/nv
+export NVIM_ROOT
+alias nv='XDG_DATA_HOME=$NVIM_ROOT/share XDG_CONFIG_HOME=$NVIM_ROOT nvim'
 
 # Starship
 eval "$(starship init zsh)"
