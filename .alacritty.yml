@@ -1,21 +1,18 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
-
+# shell:
+#   program: /usr/bin/tmux new-session -As $(basename "$PWD" | tr . -)
+#
 env:
   TERM: xterm-256color
 
 window:
+  opacity: 0.9
   dimensions:
     columns: 200
     lines: 50
   padding:
-    x: 5
-    y: 5
+    x: 1
+    y: 1
   decorations: none
 
 scrolling:
@@ -24,18 +21,18 @@ scrolling:
 
 font:
   normal:
-    family: MesloLGS NF
-    style: Regular
+    family: FiraCode Nerd Font
+    style: Normal
   bold:
-    family: MesloLGS NF
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: MesloLGS NF
+    family: FiraCode Nerd Font
     style: Italic
   bold_italic:
-    family: MesloLGS NF
+    family: FiraCode Nerd Font
     style: Bold Italic
-  size: 10.0
+  size: 9.0
   offset:
     x: 0
     y: 0
@@ -47,34 +44,29 @@ font:
 colors:
   # Default colors
   primary:
-    background: "#333333"
-    foreground: "#F2F2F2"
+    background: '#2E3440'
+    foreground: '#D8DEE9'
 
   # Normal colors
   normal:
-    black: "#333333"
-    red: "#CC0000"
-    green: "#4E9A06"
-    yellow: "#C4A000"
-    blue: "#3465A4"
-    magenta: "#75507B"
-    cyan: "#06989A"
-    white: "#D3D7CF"
+    black: '#3B4252'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#88C0D0'
+    white: '#E5E9F0'
 
   # Bright colors
   bright:
-    black: "#88807C"
-    red: "#F15D22"
-    green: "#73C48F"
-    yellow: "#FFCE51"
-    blue: "#48B9C7"
-    magenta: "#AD7FA8"
-    cyan: "#34E2E2"
-    white: "#EEEEEC"
+    black: '#4C566A'
+    red: '#BF616A'
+    green: '#A3BE8C'
+    yellow: '#EBCB8B'
+    blue: '#81A1C1'
+    magenta: '#B48EAD'
+    cyan: '#8FBCBB'
+    white: '#ECEFF4'
 
-cursor:
-  style: Block
-  unfocused_hollow: true
-
-window.opacity: 0.50
-theme: Pop!-OS
+# theme: Nord

@@ -1,0 +1,11 @@
+format = """
+$all\
+"""
+
+[directory]
+truncation_length = 99
+truncate_to_repo = false
+
+[golang]
+format = 'via [🏎💨 $version](bold cyan) '
+
